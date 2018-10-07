@@ -20,8 +20,6 @@ float Divide(float op1, float op2)
 }
 
 
-
-
 float GetOperand(){
   float op = 0;
   printf("Enter Operand: ");
@@ -30,7 +28,28 @@ float GetOperand(){
   return op;
 }
 
+void Choise(op1, op2){
 
+  if (choise == 1) {
+      sum = Add(op1, op2);
+      printf("%f + %f = %f\n", op1, op2,sum);
+  }
+  else if (choise == 2) {
+      sum = Subtract(op1, op2);
+      printf("%f - %f = %f\n", op1, op2,sum);
+  }
+  else if (choise == 3) {
+      sum = Multiply(op1, op2);
+      printf("%f * %f = %f\n", op1, op2,sum);
+  }
+  else if (choise == 4) {
+      sum = Divide(op1, op2);
+      printf("%f / %f = %f\n", op1, op2, sum);
+  }
+  else if (choise == -1) {
+    printf("Programm stoped\n");
+  }
+}
 
 void Calculate() {
   float sum = 0;
@@ -48,25 +67,7 @@ void Calculate() {
     float op1= GetOperand();
     float op2= GetOperand();
 
-    if (choise == 1) {
-        sum = Add(op1, op2);
-        printf("%f + %f = %f\n", op1, op2,sum);
-    }
-    else if (choise == 2) {
-        sum = Subtract(op1, op2);
-        printf("%f - %f = %f\n", op1, op2,sum);
-    }
-    else if (choise == 3) {
-        sum = Multiply(op1, op2);
-        printf("%f * %f = %f\n", op1, op2,sum);
-    }
-    else if (choise == 4) {
-        sum = Divide(op1, op2);
-        printf("%f / %f = %f\n", op1, op2, sum);
-    }
-    else if (choise == -1) {
-      printf("Programm stoped\n");
-    }
+    Choise(op1, op2);
 
 
 }
