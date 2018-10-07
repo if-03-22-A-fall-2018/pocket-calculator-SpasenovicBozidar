@@ -39,7 +39,7 @@ void Calculate() {
 
   while (choise != -1) {
 
-    printf("\n\n");
+    printf("\n");
     printf("Choose one of the following operations: \n");
     printf("Add(1) \nSubtract(2) \nMultiply(3) \nDivide(4) \nStop Programm(-1) \n");
 
